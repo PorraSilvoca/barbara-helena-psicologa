@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bárbara Helena da Silva e Silva | Psicóloga</title>
+<meta name="description" content="Bárbara Helena da Silva e Silva — Psicóloga CRP 12/22944. Abordagem analítico-comportamental, atendimento online, espaço afirmativo para o público LGBTQIA+.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Work+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #F4F8F6;
+    --surface: #FFFFFF;
+    --deep-teal: #1E3D37;
+    --mid-teal: #3C6E63;
+    --seafoam: #8FBFAE;
+    --seafoam-deep: #5E9584;
+    --ink: #1B2622;
+    --ink-soft: #4A5A55;
+    --line: #D3E4DD;
+    --font-display: 'Fraunces', serif;
+    --font-body: 'Work Sans', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+  }
+
+  *{ box-sizing: border-box; margin:0; padding:0; }
+
+  html{ scroll-behavior: smooth; }
+
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a{ color: inherit; text-decoration: none; }
+
+  img, svg{ display:block; max-width:100%; }
+
+  .wrap{
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ---------- NAV ---------- */
+  header{
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(244,248,246,0.9);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav.wrap{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+  .brand{
+    display:flex;
+    flex-direction: column;
+    line-height: 1.1;
+  }
+  .brand .name{
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--deep-teal);
+  }
+  .brand .crp{
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--mid-teal);
+    margin-top: 2px;
+  }
+  .nav-links{
+    display:flex;
+    align-items:center;
+    gap: 32px;
+  }
+  .nav-links a{
+    font-size: 14px;
+    color: var(--ink-soft);
+    transition: color .2s ease;
+  }
+  .nav-links a:hover{ color: var(--deep-teal); }
+  .nav-cta{
+    background: var(--deep-teal);
+    color: #fff !important;
+    padding: 9px 18px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    transition: background .2s ease;
+  }
+  .nav-cta:hover{ background: var(--mid-teal); }
+  .menu-toggle{ display:none; }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding: 88px 0 64px;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 56px;
+    align-items: center;
+  }
+  .eyebrow{
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--seafoam-deep);
+    margin-bottom: 18px;
+    display:flex;
+    align-items:center;
+    gap: 10px;
+  }
+  .eyebrow::before{
+    content:'';
+    width: 22px;
+    height: 1px;
+    background: var(--seafoam-deep);
+  }
+  h1{
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 1.12;
+    color: var(--deep-teal);
+    letter-spacing: -0.01em;
+  }
+  h1 em{
+    font-style: italic;
+    font-weight: 400;
+    color: var(--mid-teal);
+  }
+  .hero-sub{
+    margin-top: 20px;
+    font-size: 17px;
+    color: var(--ink-soft);
+    max-width: 46ch;
+  }
+  .hero-actions{
+    margin-top: 32px;
+    display:flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap: 8px;
+    padding: 13px 24px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all .2s ease;
+    border: 1px solid transparent;
+  }
+  .btn-primary{
+    background: var(--deep-teal);
+    color: #fff;
+  }
+  .btn-primary:hover{ background: var(--mid-teal); }
+  .btn-ghost{
+    border-color: var(--line);
+    color: var(--deep-teal);
+    background: var(--surface);
+  }
+  .btn-ghost:hover{ border-color: var(--seafoam-deep); }
+
+  .hero-art{
+    position: relative;
+  }
+  .hero-art svg{ width: 100%; height: auto; }
+
+  /* ---------- SECTIONS ---------- */
+  section{ padding: 72px 0; }
+  .section-line{ border-top: 1px solid var(--line); }
+
+  .section-head{
+    display:flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+  .section-num{
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--seafoam-deep);
+  }
+  h2{
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 28px;
+    color: var(--deep-teal);
+  }
+
+  .two-col{
+    display:grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 56px;
+    align-items: start;
+  }
+  .lead{
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-style: italic;
+    color: var(--mid-teal);
+    line-height: 1.5;
+  }
+  p{ color: var(--ink-soft); font-size: 16px; }
+  p + p{ margin-top: 14px; }
+
+  .tag-row{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+  }
+  .tag{
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--deep-teal);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    padding: 7px 14px;
+    border-radius: 100px;
+  }
+
+  /* ---------- ABORDAGEM cards ---------- */
+  .cards{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 8px;
+  }
+  .card{
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 28px;
+  }
+  .card h3{
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--deep-teal);
+    margin-bottom: 10px;
+  }
+  .card p{ font-size: 14.5px; }
+
+  /* ---------- ATENDIMENTO ---------- */
+  .steps{
+    display:flex;
+    flex-direction: column;
+    margin-top: 8px;
+  }
+  .step{
+    display:grid;
+    grid-template-columns: 60px 1fr;
+    gap: 20px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .step:last-child{ border-bottom: none; }
+  .step-mark{
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--seafoam-deep);
+  }
+  .step h4{
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 15.5px;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .step p{ font-size: 14.5px; }
+
+  /* ---------- CONTATO ---------- */
+  .contact-panel{
+    background: var(--deep-teal);
+    border-radius: 24px;
+    padding: 56px;
+    display:grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    align-items: center;
+    color: #EAF3EF;
+  }
+  .contact-panel h2{ color: #fff; }
+  .contact-panel .hero-sub{ color: #C9DDD5; }
+  .contact-list{ margin-top: 28px; display:flex; flex-direction:column; gap:16px; }
+  .contact-list a{
+    display:flex;
+    align-items:center;
+    gap: 12px;
+    font-size: 15px;
+    color: #fff;
+  }
+  .icon-dot{
+    width: 34px; height:34px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+  }
+  .icon-dot svg{ width:16px; height:16px; }
+  .contact-panel .btn-primary{
+    background: var(--seafoam);
+    color: var(--deep-teal);
+  }
+  .contact-panel .btn-primary:hover{ background: #A6D0C1; }
+  .contact-art svg{ width:100%; height:auto; opacity: 0.9; }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    padding: 36px 0 48px;
+    border-top: 1px solid var(--line);
+  }
+  footer .wrap{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  footer p{
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+  footer .crp-tag{
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--mid-teal);
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 860px){
+    .nav-links{ display:none; }
+    .hero{ grid-template-columns: 1fr; padding-top: 56px; }
+    .hero-art{ order: -1; max-width: 320px; margin: 0 auto; }
+    h1{ font-size: 32px; }
+    .two-col{ grid-template-columns: 1fr; gap: 28px; }
+    .cards{ grid-template-columns: 1fr; }
+    .contact-panel{ grid-template-columns: 1fr; padding: 36px 24px; text-align:left; }
+    .contact-art{ display:none; }
+    section{ padding: 52px 0; }
+    .wrap{ padding: 0 20px; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div class="brand">
+      <span class="name">Bárbara Helena</span>
+      <span class="crp">PSICÓLOGA · CRP 12/22944</span>
+    </div>
+    <div class="nav-links">
+      <a href="#sobre">Sobre</a>
+      <a href="#abordagem">Abordagem</a>
+      <a href="#atendimento">Atendimento</a>
+      <a href="#contato">Contato</a>
+      <a class="nav-cta" href="https://wa.me/5548988766140" target="_blank" rel="noopener">Agendar conversa</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero wrap">
+    <div>
+      <div class="eyebrow">Atendimento psicológico online</div>
+      <h1>Bárbara Helena<br>da Silva e Silva</h1>
+      <p class="hero-sub">
+        Psicóloga formada em 2022, com abordagem analítico-comportamental e experiência
+        no atendimento ao público LGBTQIA+. Consultas 100% online, de onde você estiver.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://wa.me/5548988766140" target="_blank" rel="noopener">Falar no WhatsApp</a>
+        <a class="btn btn-ghost" href="mailto:psicologabarbarahelena@gmail.com">Enviar e-mail</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <svg viewBox="0 0 480 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustração de um espaço de trabalho tranquilo, com mesa, notebook, planta e janela">
+        <rect x="0" y="0" width="480" height="420" rx="24" fill="#EAF3EF"/>
+        <!-- window -->
+        <rect x="300" y="40" width="130" height="160" rx="6" fill="none" stroke="#8FBFAE" stroke-width="2"/>
+        <line x1="365" y1="40" x2="365" y2="200" stroke="#8FBFAE" stroke-width="2"/>
+        <line x1="300" y1="120" x2="430" y2="120" stroke="#8FBFAE" stroke-width="2"/>
+        <path d="M310 100 Q330 80 350 100 T390 100" stroke="#5E9584" stroke-width="2" fill="none" opacity="0.6"/>
+        <!-- desk -->
+        <rect x="40" y="250" width="360" height="10" rx="2" fill="#3C6E63"/>
+        <rect x="55" y="260" width="8" height="90" fill="#3C6E63"/>
+        <rect x="365" y="260" width="8" height="90" fill="#3C6E63"/>
+        <!-- laptop -->
+        <rect x="150" y="205" width="110" height="46" rx="4" fill="none" stroke="#1E3D37" stroke-width="2.5"/>
+        <rect x="140" y="249" width="130" height="6" rx="2" fill="#1E3D37"/>
+        <!-- notebook -->
+        <rect x="90" y="238" width="42" height="12" rx="2" fill="none" stroke="#5E9584" stroke-width="2"/>
+        <line x1="96" y1="242" x2="126" y2="242" stroke="#5E9584" stroke-width="1.5"/>
+        <line x1="96" y1="246" x2="120" y2="246" stroke="#5E9584" stroke-width="1.5"/>
+        <!-- mug -->
+        <circle cx="300" cy="240" r="10" fill="none" stroke="#3C6E63" stroke-width="2"/>
+        <path d="M309 236 q8 2 8 8 q0 6 -8 6" fill="none" stroke="#3C6E63" stroke-width="2"/>
+        <!-- plant -->
+        <ellipse cx="55" cy="253" rx="14" ry="6" fill="#3C6E63"/>
+        <path d="M55 253 C 45 235, 40 215, 50 195" stroke="#5E9584" stroke-width="2.5" fill="none"/>
+        <path d="M55 253 C 60 232, 65 210, 60 190" stroke="#5E9584" stroke-width="2.5" fill="none"/>
+        <path d="M55 253 C 55 230, 50 205, 55 185" stroke="#8FBFAE" stroke-width="2.5" fill="none"/>
+        <!-- chair -->
+        <path d="M200 350 C 190 320, 190 290, 205 268" stroke="#1E3D37" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M200 350 L 260 350" stroke="#1E3D37" stroke-width="3" stroke-linecap="round"/>
+        <path d="M205 350 L 200 385" stroke="#1E3D37" stroke-width="3" stroke-linecap="round"/>
+        <path d="M255 350 L 258 385" stroke="#1E3D37" stroke-width="3" stroke-linecap="round"/>
+        <!-- floor line -->
+        <line x1="40" y1="385" x2="440" y2="385" stroke="#C9DDD5" stroke-width="1.5"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="section-line">
+    <div class="wrap two-col">
+      <div>
+        <div class="section-head">
+          <span class="section-num">01</span>
+          <h2>Sobre</h2>
+        </div>
+        <p class="lead">Um espaço de escuta cuidadosa, construído com respeito à sua história.</p>
+      </div>
+      <div>
+        <p>
+          Sou Bárbara Helena, psicóloga formada em 2022. Atuo com abordagem
+          analítico-comportamental, buscando compreender os comportamentos e sentimentos
+          de cada pessoa a partir de sua história e do contexto em que vive.
+        </p>
+        <p>
+          Tenho experiência no atendimento ao público LGBTQIA+, oferecendo um espaço
+          seguro, acolhedor e livre de julgamentos para que você possa se expressar
+          com autenticidade.
+        </p>
+        <div class="tag-row">
+          <span class="tag">CRP 12/22944</span>
+          <span class="tag">Analítico-comportamental</span>
+          <span class="tag">Afirmativo LGBTQIA+</span>
+          <span class="tag">Atendimento online</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABORDAGEM -->
+  <section id="abordagem" class="section-line">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-num">02</span>
+        <h2>Abordagem</h2>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <h3>Analítico-comportamental</h3>
+          <p>
+            O trabalho terapêutico parte da análise do comportamento em seu contexto:
+            o que o antecede, o que o mantém e como ele pode ser compreendido e
+            transformado ao longo do processo.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Espaço afirmativo</h3>
+          <p>
+            O atendimento é pensado para acolher as vivências do público LGBTQIA+,
+            respeitando identidade de gênero, orientação sexual e as particularidades
+            de cada trajetória.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ATENDIMENTO -->
+  <section id="atendimento" class="section-line">
+    <div class="wrap two-col">
+      <div>
+        <div class="section-head">
+          <span class="section-num">03</span>
+          <h2>Atendimento</h2>
+        </div>
+        <p class="lead">Consultas 100% online, com a mesma atenção de um consultório presencial.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <span class="step-mark">→</span>
+          <div>
+            <h4>Modalidade online</h4>
+            <p>As sessões acontecem por videochamada, de onde for mais confortável para você.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-mark">→</span>
+          <div>
+            <h4>Primeiro contato</h4>
+            <p>Envie uma mensagem pelo WhatsApp ou e-mail para conversarmos sobre horários e valores.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-mark">→</span>
+          <div>
+            <h4>Sigilo e cuidado</h4>
+            <p>Todo o processo segue o código de ética profissional da Psicologia, com total confidencialidade.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato">
+    <div class="wrap">
+      <div class="contact-panel">
+        <div>
+          <div class="section-head" style="margin-bottom:16px;">
+            <span class="section-num" style="color:#8FBFAE;">04</span>
+            <h2>Vamos conversar?</h2>
+          </div>
+          <p class="hero-sub">Se você sente que este pode ser o momento de buscar apoio, entre em contato. Será um prazer conversar com você.</p>
+          <div class="contact-list">
+            <a href="https://wa.me/5548988766140" target="_blank" rel="noopener">
+              <span class="icon-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5 8.4 8.4 0 0 1-4.1-1.05L3 20l1.1-5.2A8.5 8.5 0 1 1 21 11.5Z"/></svg></span>
+              (48) 98876-6140
+            </a>
+            <a href="mailto:psicologabarbarahelena@gmail.com">
+              <span class="icon-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/></svg></span>
+              psicologabarbarahelena@gmail.com
+            </a>
+          </div>
+          <div class="hero-actions" style="margin-top:32px;">
+            <a class="btn btn-primary" href="https://wa.me/5548988766140" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+          </div>
+        </div>
+        <div class="contact-art">
+          <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustração de janela com planta">
+            <rect x="30" y="30" width="150" height="200" rx="6" fill="none" stroke="#8FBFAE" stroke-width="2"/>
+            <line x1="105" y1="30" x2="105" y2="230" stroke="#8FBFAE" stroke-width="2"/>
+            <line x1="30" y1="130" x2="180" y2="130" stroke="#8FBFAE" stroke-width="2"/>
+            <ellipse cx="220" cy="255" rx="20" ry="8" fill="#3C6E63"/>
+            <path d="M220 255 C 205 230, 200 200, 215 175" stroke="#5E9584" stroke-width="2.5" fill="none"/>
+            <path d="M220 255 C 228 228, 235 200, 226 172" stroke="#8FBFAE" stroke-width="2.5" fill="none"/>
+            <path d="M220 255 C 220 225, 212 195, 220 168" stroke="#5E9584" stroke-width="2.5" fill="none"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Bárbara Helena da Silva e Silva · Psicóloga</p>
+    <p class="crp-tag">CRP 12/22944</p>
+  </div>
+</footer>
+
+</body>
+</html>
