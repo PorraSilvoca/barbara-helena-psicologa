@@ -106,11 +106,8 @@
 
   /* ---------- HERO ---------- */
   .hero{
-    padding: 88px 0 64px;
-    display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
-    gap: 56px;
-    align-items: center;
+    padding: 96px 0 72px;
+    max-width: 720px;
   }
   .eyebrow{
     font-family: var(--font-mono);
@@ -176,11 +173,6 @@
     background: var(--surface);
   }
   .btn-ghost:hover{ border-color: var(--seafoam-deep); }
-
-  .hero-art{
-    position: relative;
-  }
-  .hero-art svg{ width: 100%; height: auto; }
 
   /* ---------- SECTIONS ---------- */
   section{ padding: 72px 0; }
@@ -291,10 +283,7 @@
     background: var(--deep-teal);
     border-radius: 24px;
     padding: 56px;
-    display:grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 40px;
-    align-items: center;
+    max-width: 640px;
     color: #EAF3EF;
   }
   .contact-panel h2{ color: #fff; }
@@ -320,7 +309,6 @@
     color: var(--deep-teal);
   }
   .contact-panel .btn-primary:hover{ background: #A6D0C1; }
-  .contact-art svg{ width:100%; height:auto; opacity: 0.9; }
 
   /* ---------- FOOTER ---------- */
   footer{
@@ -347,13 +335,11 @@
   /* ---------- RESPONSIVE ---------- */
   @media (max-width: 860px){
     .nav-links{ display:none; }
-    .hero{ grid-template-columns: 1fr; padding-top: 56px; }
-    .hero-art{ order: -1; max-width: 320px; margin: 0 auto; }
+    .hero{ padding-top: 56px; }
     h1{ font-size: 32px; }
     .two-col{ grid-template-columns: 1fr; gap: 28px; }
     .cards{ grid-template-columns: 1fr; }
-    .contact-panel{ grid-template-columns: 1fr; padding: 36px 24px; text-align:left; }
-    .contact-art{ display:none; }
+    .contact-panel{ padding: 36px 24px; }
     section{ padding: 52px 0; }
     .wrap{ padding: 0 20px; }
   }
@@ -395,43 +381,6 @@
         <a class="btn btn-primary" href="https://wa.me/5548988766140" target="_blank" rel="noopener">Falar no WhatsApp</a>
         <a class="btn btn-ghost" href="mailto:psicologabarbarahelena@gmail.com">Enviar e-mail</a>
       </div>
-    </div>
-    <div class="hero-art">
-      <svg viewBox="0 0 480 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustração de um espaço de trabalho tranquilo, com mesa, notebook, planta e janela">
-        <rect x="0" y="0" width="480" height="420" rx="24" fill="#EAF3EF"/>
-        <!-- window -->
-        <rect x="300" y="40" width="130" height="160" rx="6" fill="none" stroke="#8FBFAE" stroke-width="2"/>
-        <line x1="365" y1="40" x2="365" y2="200" stroke="#8FBFAE" stroke-width="2"/>
-        <line x1="300" y1="120" x2="430" y2="120" stroke="#8FBFAE" stroke-width="2"/>
-        <path d="M310 100 Q330 80 350 100 T390 100" stroke="#5E9584" stroke-width="2" fill="none" opacity="0.6"/>
-        <!-- desk -->
-        <rect x="40" y="250" width="360" height="10" rx="2" fill="#3C6E63"/>
-        <rect x="55" y="260" width="8" height="90" fill="#3C6E63"/>
-        <rect x="365" y="260" width="8" height="90" fill="#3C6E63"/>
-        <!-- laptop -->
-        <rect x="150" y="205" width="110" height="46" rx="4" fill="none" stroke="#1E3D37" stroke-width="2.5"/>
-        <rect x="140" y="249" width="130" height="6" rx="2" fill="#1E3D37"/>
-        <!-- notebook -->
-        <rect x="90" y="238" width="42" height="12" rx="2" fill="none" stroke="#5E9584" stroke-width="2"/>
-        <line x1="96" y1="242" x2="126" y2="242" stroke="#5E9584" stroke-width="1.5"/>
-        <line x1="96" y1="246" x2="120" y2="246" stroke="#5E9584" stroke-width="1.5"/>
-        <!-- mug -->
-        <circle cx="300" cy="240" r="10" fill="none" stroke="#3C6E63" stroke-width="2"/>
-        <path d="M309 236 q8 2 8 8 q0 6 -8 6" fill="none" stroke="#3C6E63" stroke-width="2"/>
-        <!-- plant -->
-        <ellipse cx="55" cy="253" rx="14" ry="6" fill="#3C6E63"/>
-        <path d="M55 253 C 45 235, 40 215, 50 195" stroke="#5E9584" stroke-width="2.5" fill="none"/>
-        <path d="M55 253 C 60 232, 65 210, 60 190" stroke="#5E9584" stroke-width="2.5" fill="none"/>
-        <path d="M55 253 C 55 230, 50 205, 55 185" stroke="#8FBFAE" stroke-width="2.5" fill="none"/>
-        <!-- chair -->
-        <path d="M200 350 C 190 320, 190 290, 205 268" stroke="#1E3D37" stroke-width="3" fill="none" stroke-linecap="round"/>
-        <path d="M200 350 L 260 350" stroke="#1E3D37" stroke-width="3" stroke-linecap="round"/>
-        <path d="M205 350 L 200 385" stroke="#1E3D37" stroke-width="3" stroke-linecap="round"/>
-        <path d="M255 350 L 258 385" stroke="#1E3D37" stroke-width="3" stroke-linecap="round"/>
-        <!-- floor line -->
-        <line x1="40" y1="385" x2="440" y2="385" stroke="#C9DDD5" stroke-width="1.5"/>
-      </svg>
-    </div>
   </section>
 
   <!-- SOBRE -->
@@ -552,17 +501,6 @@
           <div class="hero-actions" style="margin-top:32px;">
             <a class="btn btn-primary" href="https://wa.me/5548988766140" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
           </div>
-        </div>
-        <div class="contact-art">
-          <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustração de janela com planta">
-            <rect x="30" y="30" width="150" height="200" rx="6" fill="none" stroke="#8FBFAE" stroke-width="2"/>
-            <line x1="105" y1="30" x2="105" y2="230" stroke="#8FBFAE" stroke-width="2"/>
-            <line x1="30" y1="130" x2="180" y2="130" stroke="#8FBFAE" stroke-width="2"/>
-            <ellipse cx="220" cy="255" rx="20" ry="8" fill="#3C6E63"/>
-            <path d="M220 255 C 205 230, 200 200, 215 175" stroke="#5E9584" stroke-width="2.5" fill="none"/>
-            <path d="M220 255 C 228 228, 235 200, 226 172" stroke="#8FBFAE" stroke-width="2.5" fill="none"/>
-            <path d="M220 255 C 220 225, 212 195, 220 168" stroke="#5E9584" stroke-width="2.5" fill="none"/>
-          </svg>
         </div>
       </div>
     </div>
