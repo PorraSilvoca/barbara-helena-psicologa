@@ -209,6 +209,15 @@
     color: var(--mid-teal);
     line-height: 1.5;
   }
+  .about-photo{
+    width: 100%;
+    max-width: 280px;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 1px solid var(--line);
+    margin-bottom: 28px;
+  }
   p{ color: var(--ink-soft); font-size: 16px; }
   p + p{ margin-top: 14px; }
 
@@ -338,6 +347,7 @@
     .hero{ padding-top: 56px; }
     h1{ font-size: 32px; }
     .two-col{ grid-template-columns: 1fr; gap: 28px; }
+    .about-photo{ max-width: 220px; }
     .cards{ grid-template-columns: 1fr; }
     .contact-panel{ padding: 36px 24px; }
     section{ padding: 52px 0; }
@@ -387,6 +397,7 @@
   <section id="sobre" class="section-line">
     <div class="wrap two-col">
       <div>
+        <img src="assets/foto-barbara.png" alt="Foto de Bárbara Helena, psicóloga" class="about-photo">
         <div class="section-head">
           <span class="section-num">01</span>
           <h2>Sobre</h2>
